@@ -82,14 +82,20 @@ Ramp-up Period: 10
 
 ## Summary 
 
-While executed 100 Threads, a total of 600 concurrent request are made found with error rate 0%
+Dear,
 
-While executed 1600 Threads, a total of 9600 concurrent request are made found with error rate 0%
+I’ve completed performance test on frequently used webpages for restful-booker.herokuapp.com.
+Test executed for the below mentioned scenario in server 000.000.000.00.
 
-While executed 2500 Threads, a total of 15000 concurrent request are made found with error rate 0.02%
+700 Concurrent Request with 1 Loop Count; Avg TPS for Total Samples is ~ 23 And Total Concurrent API requested: 2100.
+800 Concurrent Request with 1 Loop Count; Avg TPS for Total Samples is ~ 29 And Total Concurrent API requested: 2450.
 
 
-Server can handle almost concurrent 2500 API call with almost zero error rate.
+While executed 450 concurrent request, found 26 request got connection timeout and error rate is 0.83%.
+
+Summary: Server can handle almost concurrent 2975 API call with almost zero (0) error rate.
+
+Please find the details report from the attachment and let me know if you have any further queries.
 
 
 
