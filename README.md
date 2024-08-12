@@ -27,24 +27,26 @@ Ramp-up Periods (in Seconds):
 Loop Count: 1
 
 
-1. Test Plan specifies the general settings for test execution, such as whether Thread Groups will run simultaneously or sequentially.
+1. The Test Plan specifies the general settings for test execution, such as whether Thread Groups will run simultaneously or sequentially.
 2. HTTP Requests utilize some of the HTTP Request item's default settings, such as the Server IP, Port Number, and Content-Encoding.
-3. Each Thread Group describes how HTTP requests should be executed. To establish how many concurrent "users" will be simulated, we first need to determine the number of threads. The loop count determines the number of actions that each "user" will perform.
+3. Each Thread Group describes how HTTP requests should be executed. We first need to determine the number of threads to establish how many concurrent "users" will be simulated. The loop count specifies the number of actions that each "user" will perform.
 4. The first item in Thread Groups is the HTTP Header Manager, which lets you input the Request Headers that the next HTTP Requests will use.
 
-## Using User Defined Variables Steps:
+## Using User-Defined Variables Steps:
 
-1.Right-click on the Test Plan or any other node in your test plan.
-2.Go to Add > Config Element > User Defined Variables.
-3.In the User Defined Variables configuration, add the variable name and value.
+1. Right-click on the Test Plan or any other node in your test plan.
+2. Go to Add > Config Element > User Defined Variables.
+3. In the User Defined Variables configuration, add the variable name and value.
+    
 Example:
 If you add a variable called baseUrl with a value of https://restful-booker.herokuapp.com/, you can use this variable in your test plan by referencing it as ${Url}.
 
 ![image](https://github.com/user-attachments/assets/e4462ca1-d4bd-4ee0-aef0-18000acb9a40)
 
 ## JSON Extractor in JMeter: Quick Steps
-1.Add HTTP Request: Create an HTTP Request in your test plan.
-2.Add JSON Extractor: Right-click the HTTP Request, then add Post Processors > JSON Extractor.
+1. Add HTTP Request: Create an HTTP Request in your test plan.
+2.  Add JSON Extractor: Right-click the HTTP Request, then add Post Processors > JSON Extractor.
+   
 Configure:
 Variable Name: e.g., bookingId.
 JSON Path: e.g., $.bookingid.
@@ -87,13 +89,13 @@ Dear,
 I’ve completed performance test on frequently used webpages for restful-booker.herokuapp.com.
 Test executed for the below mentioned scenario in server 000.000.000.00.
 
-700 Concurrent Request with 1 Loop Count; Avg TPS for Total Samples is ~ 23 And Total Concurrent API requested: 2100.
-800 Concurrent Request with 1 Loop Count; Avg TPS for Total Samples is ~ 29 And Total Concurrent API requested: 2450.
+700 Concurrent Request with 1 Loop Count; Avg TPS for Total Samples is ~ 50 And Total Concurrent API requested: 3500.
+800 Concurrent Request with 1 Loop Count; Avg TPS for Total Samples is ~ 66 And Total Concurrent API requested: 4000.
 
 
-While executed 450 concurrent request, found 26 request got connection timeout and error rate is 0.83%.
+While executed 450 concurrent request, found 54 request got connection timeout and error rate is 1.35%.
 
-Summary: Server can handle almost concurrent 2975 API call with almost zero (0) error rate.
+Summary: Server can handle almost concurrent 3600 API call with almost zero (0) error rate.
 
 Please find the details report from the attachment and let me know if you have any further queries.
 
