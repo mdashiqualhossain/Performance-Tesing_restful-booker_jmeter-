@@ -54,7 +54,7 @@ JSON Path: e.g., $.bookingid.
 ![image](https://github.com/user-attachments/assets/2aef1cc0-5b90-4e9e-8076-0cd38f136dff)
 
 
-## Code to Run 
+## Code to Run on cmd 
 
     
     
