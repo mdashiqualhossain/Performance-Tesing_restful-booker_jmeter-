@@ -1,2 +1,3 @@
+# Force GitHub to recognize these languages
 *.js linguist-language=JavaScript
 *.java linguist-language=Java
